@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary-blue: #008ad2;
+  --color-secondary-blue: #009ee3;
+  --color-primary-red: #e3000f;
+  --color-graphite: #1f2328;
+  --color-surface: #f5f8fb;
+  --color-border: #dce8f2;
+  --radius-card: 16px;
+  --shadow-card: 0 8px 24px rgba(31, 35, 40, 0.08);
+  --space-unit: 8px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--color-graphite);
+  background: white;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container-main {
+  @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-xl bg-brand-red px-5 py-3 text-sm font-semibold text-white transition hover:bg-red-700;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-xl border border-brand-border bg-white px-5 py-3 text-sm font-semibold text-brand-graphite transition hover:bg-brand-surface;
+}
+
+.card {
+  @apply rounded-card border border-brand-border bg-white p-6 shadow-card;
+}
